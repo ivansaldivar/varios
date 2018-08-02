@@ -17,8 +17,9 @@ The first line contains three space-separated integers and , the number of rows,
 
 Each of the next lines contains three space-separated integers, and , the row number and the track column start and end.
 
----
+
 Constraints
+---
 ![](https://raw.githubusercontent.com/ivansaldivar/varios/master/figura2.png).
 
 Output Format
