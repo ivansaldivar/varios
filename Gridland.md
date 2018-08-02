@@ -8,13 +8,21 @@ Note: A train track may overlap other train tracks within the same row.
 
 For example, if Gridland's data is the following:
 
-k = 3
-r	  c1	c2
-1	  1	  4
-2	  2	  4
-3	  1 	2
-4	  2	  3	
+![](https://raw.githubusercontent.com/ivansaldivar/varios/master/figura1.png).
 
-It yields the following map:
+---
+Input Format
 
-![](https://raw.githubusercontent.com/ivansaldivar/varios/master/c-gridland_2.png).
+The first line contains three space-separated integers and , the number of rows, columns and tracks to be mapped.
+
+Each of the next lines contains three space-separated integers, and , the row number and the track column start and end.
+
+---
+Constraints
+![](https://raw.githubusercontent.com/ivansaldivar/varios/master/figura2.png).
+
+Output Format
+
+Print a single integer denoting the number of cells where the mayor can install lampposts.
+
+Sample Input
