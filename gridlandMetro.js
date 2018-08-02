@@ -26,22 +26,42 @@ function readLine() {
 
 // Complete the gridlandMetro function below.
 // SOLUTION: 
-// Calculate total cells (n x m), and calculate cells occupied with tracks, 
-// then return the rest of total cells minus cells occupied with tracks.
-//
-// SOLUCION: 
-// calcule las celdas totales (n x m) y calcule las celdas ocupadas con las pistas,
-// luego regrese el resto del total de celdas menos las celdas ocupadas con las pistas.
+
 function gridlandMetro(n, m, k, track) {
     
-    var lampostCellPossibles = n * m;
-    var cellTracks = 0;
-
+    var cellsGridLand = Array(n); //Arreglo de n posiciones (filas)
+    var output = 0;
+    var fila, pos1, pos2;
+    
+    for(let n_=0; n_ < n; n_++){
+        cellsGridLand[n_] = new Array(m); //Cada fila tiene un arreglo de m posiciones (columnas)
+    }
+    //Inicializo la matriz de celdas n x m a 0 en cada posicion
+    for(let n_=0; n_ < n; n_++){
+        for(let l_=0; l_ < m; l_++){
+            cellsGridLand[n_][l_]=0;
+        }
+    }
+    
+    //Cargo 1 en las posiciones entre las cuales estan los tracks
     for(let x=0; x < k; x++){
-        cellTracks = cellTracks + parseInt(track[x][2])- parseInt(track[x][1])+1;
+        fila = parseInt(track[x][0]);
+        pos1 = parseInt(track[x][1]);
+        pos2 = parseInt(track[x][2]);
+        
+        for(let l_=pos1-1; l_<=(pos2-1); l_++){
+            cellsGridLand[fila-1][l_] = 1;    
+        }   
     }
 
-    return (lampostCellPossibles-cellTracks);
+    //Contabilizo cuales cuantas posiciones quedaron con 0
+    for(let n_=0; n_ < n; n_++){
+        for(let l_=0; l_ < m; l_++){
+            if(cellsGridLand[n_][l_]==0) output++;
+        }
+    }
+    
+    return output;
 
 }
 
