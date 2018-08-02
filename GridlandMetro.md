@@ -10,9 +10,9 @@ For example, if Gridland's data is the following:
 
 ![](https://raw.githubusercontent.com/ivansaldivar/varios/master/figura1.png).
 
----
-Input Format
 
+Input Format
+---
 The first line contains three space-separated integers and , the number of rows, columns and tracks to be mapped.
 
 Each of the next lines contains three space-separated integers, and , the row number and the track column start and end.
@@ -23,7 +23,10 @@ Constraints
 ![](https://raw.githubusercontent.com/ivansaldivar/varios/master/figura2.png).
 
 Output Format
-
+---
 Print a single integer denoting the number of cells where the mayor can install lampposts.
 
-Sample Input
+![](https://raw.githubusercontent.com/ivansaldivar/varios/master/figura3.png).
+
+
+AUTOR: https://www.hackerrank.com/profile/nabila_ahmed
