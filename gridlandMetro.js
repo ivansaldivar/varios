@@ -37,11 +37,13 @@ function gridlandMetro(n, m, k, track) {
         cellsGridLand[n_] = new Array(m); //Cada fila tiene un arreglo de m posiciones (columnas)
     }
     //Inicializo la matriz de celdas n x m a 0 en cada posicion
+    /*
     for(let n_=0; n_ < n; n_++){
         for(let l_=0; l_ < m; l_++){
             cellsGridLand[n_][l_]=0;
         }
     }
+    */
     
     //Cargo 1 en las posiciones entre las cuales estan los tracks
     for(let x=0; x < k; x++){
@@ -54,10 +56,10 @@ function gridlandMetro(n, m, k, track) {
         }   
     }
 
-    //Contabilizo cuales cuantas posiciones quedaron con 0
+    //Contabilizo cuales cuantas posiciones quedaron sin valor 1
     for(let n_=0; n_ < n; n_++){
         for(let l_=0; l_ < m; l_++){
-            if(cellsGridLand[n_][l_]==0) output++;
+            if(cellsGridLand[n_][l_]!=1) output++;
         }
     }
     
